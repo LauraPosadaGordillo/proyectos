@@ -1,0 +1,113 @@
+FOR
+My brother = "Liam juega con carritos"
+for letra in My brother:
+    print(letra)
+
+#******************************************************************
+
+iniciales = ["m", "e", "l"]
+for n in iniciales:
+    print(n)
+
+#******************************************************************
+
+lista = ["z", "y", "x"]
+v = ""
+for n in lista:
+    v = v + n
+print(v)
+
+#******************************************************************
+
+
+vocales = ["a", "e", "i", "u", "o"]
+posicion = 0
+for letra in vocales:
+    print(f"En la posición {posicion} está la letra {letra}")
+    posicion = posicion + 1
+
+#******************************************************************
+
+letras = ["j", "k", "l", "m"]
+for letra in letras:
+    numero_de_letra = letras.index(letra) + 1
+    print(f"La letra {numero_de_letra} es {letra}")
+
+#******************************************************************
+
+numeros = [4, 8, 12, 16, 20]
+valor = 0
+ciclo = 1
+for n in numeros:
+    valor = valor + n
+    print(f"La suma en el ciclo {ciclo} es {valor}")
+    ciclo = ciclo + 1
+print(f"El resultado de la suma de todos los números de la lista es {valor}")
+
+#******************************************************************
+
+for lista_de_listas in [[3,4], ["Gabo","Décimo"], ["fresas","cerezas"]]:
+    print(lista_de_listas)
+
+#******************************************************************
+
+for a,b in [[10,11], [6,7], [3,"hola"]]:
+    print(a)
+    print(b)
+
+#******************************************************************
+
+recetas = {'clave_1':'valor_a', 'clave_2':'valor_b', 'clave_3':'valor_c'}
+for parte_claves in recetas:
+    print(parte_claves)
+
+#******************************************************************
+
+llave = {'clave_1':'valor_a', 'clave_2':'valor_b', 'clave_3':'valor_c'}
+for parte_valores in llave.values():
+    print(parte_valores)
+
+#******************************************************************  
+
+candado = {'clave_1':'valor_a', 'clave_2':'valor_b', 'clave_3':'valor_c'}
+for item in candado.items():
+    print(item)
+
+
+WHILE
+monedas = 7
+while monedas > 2:
+    print(f"Tengo {monedas} monedas")
+    monedas = monedas - 1
+print("tengo poco dinero")
+
+#******************************************************************
+
+respuesta = "correcto"
+while respuesta == "correcto":
+    respuesta hola= input("continuara?: ")
+else:
+    print("Gracias")
+
+#******************************************************************
+
+respuesta = "yes"
+while respuesta == "yes":
+    print("sigue en el ciclo forever")
+print("")
+
+#******************************************************************
+
+fruta = input("Ingrese su fruta favorita: ")
+for letra in fruta:
+    if letra == "i":
+        break
+    print(letra)
+
+#******************************************************************
+
+asignatura = input("Ingrese su asignatura favorita: ")
+for letra in asignatura:
+    if letra == "a":
+        continue
+    print(letra)
