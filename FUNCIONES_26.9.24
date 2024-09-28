@@ -1,0 +1,111 @@
+# return
+def multiplicar(n1, n2):
+    x = n1 * n2
+    return x
+
+num_1 = int(input("Ingrese primer número: "))
+num_2 = int(input("Ingrese segundo número: "))
+resultado = multiplicar(num_1, num_2)
+print(f"El resultado de la multiplicación es: {resultado}")
+
+#**************************************************************************************
+
+# Función
+def verificar_numeros(numero):
+    return numero in range(15, 90)
+
+# Código Principal
+entrada = int(input("Ingrese un número: "))
+resultado = verificar_numeros(entrada)
+print(resultado)
+
+#**************************************************************************************
+
+# Función
+def chequeo_de_numeros(datos):
+    lista_numeros = []
+    for numero in datos:
+        if numero in range(1, 15):
+            lista_numeros.append(numero)
+        else:
+            pass
+    return lista_numeros
+
+# Código Principal
+resultado = chequeo_de_numeros([2, 6, 5, 1, 15, 9, 20, 33, 17])
+print(resultado)
+
+#*****************************************************************************
+
+# Función 
+def suma(a, b):
+    suma_numeros = a + b
+    return suma_numeros
+
+# Código Principal
+n1 = int(input("Ingrese primer número: "))
+n2 = int(input("Ingrese segundo número: "))
+total = suma(n1, n2)
+print(f"La suma de los números ingresados es: {total}")
+
+#******************************************************************************
+
+# Función (*argumento)
+def suma_con_args(*args):
+    suma_numeros = 0
+    for numero in args:
+        suma_numeros = numero + suma_numeros
+    return suma_numeros
+
+# Código Principal
+lista_args = []
+numero = int(input("Ingrese un número: "))
+lista_args.append(numero)
+seleccion = input("¿Desea ingresar más números a la sumatoria? s/n: ")
+while seleccion == "s":
+    numero_ingresado = int(input("Ingrese un número: "))
+    lista_args.append(numero_ingresado)
+    seleccion = input("¿Desea ingresar más números a la sumatoria? s/n: ")
+x = suma_con_args(*lista_args)
+print(f"Se ha generado la lista {lista_args} con los números ingresados, y la suma de ellos es: {x}")
+
+#*****************************************************************************
+
+# Funciones
+
+from random import shuffle
+
+def revolver(lista):
+    shuffle(lista)
+    return lista
+
+def probar_suerte():
+    suerte = '0'
+    while suerte not in ['1', '2', '3', '4', '5']:
+        suerte = input("Elige un número del 1 al 5: ")
+    suerte_entero = int(suerte)
+    return suerte_entero
+
+def chequear_suerte(lista, posicion):
+    if lista[posicion - 1] in ['NO TIENE NOTA_0', 'NO TIENE NOTA_1']:
+        print("Eso le pasa por rejuntarse en un grupo con cinco estudiantes")
+    else:
+        print("Ha estado muy de buenas")
+    print(f"La posición que le correspondió en la lista fue {lista[posicion-1]}")
+
+# Código Principal
+
+quien_no_tiene_nota = ['NO TIENE NOTA_0', 'NO TIENE NOTA_1', 'SI TIENE NOTA_2', 'SI TIENE NOTA_3', 'SI TIENE NOTA_4']
+
+# Primero, se revuelven las posiciones en la lista de notas (primera función)
+# Segundo, se pide un número entre 1 y 5 que corresponderá, restándole 1, a una posición en la lista (segunda función)
+# Tercero, se comprueba la suerte
+
+estudiante_sin_nota = revolver(quien_no_tiene_nota)
+seleccion = probar_suerte()
+chequear_suerte(estudiante_sin_nota, seleccion)
+
+# Segundo intento
+print("\nSegundo intento:")
+seleccion = probar_suerte()
+chequear_suerte(estudiante_sin_nota, seleccion)
