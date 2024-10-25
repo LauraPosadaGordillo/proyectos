@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Saludos</title>
+</head>
+<body>
+    <h1>Ingrese su nombre</h1>
+    <input type="text" id="nombre_cualquiera">
+    <br><br>
+    <button onclick="Saludar_pues()">Click para saludar</button>
+    <button id="formal_button" onclick="Saludar_formal()">Saludo Formal</button>
+
+    <script>
+        function Saludar_pues() {
+            let saludo = document.getElementById("nombre_cualquiera").value;
+            alert("Hola " + saludo);
+        }
+
+        function Saludar_formal() {
+            let saludo = document.getElementById("nombre_cualquiera").value;
+            alert("Buenos días " + saludo);
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: plum;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+            padding-top: 18px;
+        }
+        h1 {
+            color: black;
+            font-family: cursive;
+            background-color: plum;
+        }
+        input {
+            color: rgb(3, 17, 12);
+            background-color: bisque;
+            font-family: cursive;
+            width: 200px;
+            height: 100px;
+        }
+        button {
+            color: rgb(231, 141, 111);
+            background-color: bisque;
+            margin-bottom: 20px;
+        }
+    </style>
+</body>
+</html>
