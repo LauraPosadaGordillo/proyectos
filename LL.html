@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>Ingrese el primer numero</h1>
+    <input type="number" id="numero1">
+    <h1>Ingrese el segundo numero</h1>
+    <input type="number" id="numero2">
+    <br><br>
+    <button onclick="suma()">Suma</button>
+    <button onclick="resta()">Resta</button>
+    <button onclick="multiplicacion()">Multiplicacion</button>
+    <button onclick="division()">Division</button>
+    <h1>El resultado de la operacion es <span id="resultado">***</span></h1>
+    <script>
+        function suma(){
+            let num1 = document.getElementById("numero1").value;
+            let num2 = document.getElementById("numero2").value;
+            let suma_numero = Number(num1) + Number(num2);
+            let res = document.getElementById("resultado");
+            res.textContent = suma_numero;
+        }
+
+        function resta(){
+            let num1 = document.getElementById("numero1").value;
+            let num2 = document.getElementById("numero2").value;
+            let resta_numero = Number(num1) - Number(num2);
+            let res = document.getElementById("resultado");
+            res.textContent = resta_numero;
+        }
+
+        function multiplicacion(){
+            let num1 = document.getElementById("numero1").value;
+            let num2 = document.getElementById("numero2").value;
+            let multiplicacion_numero = Number(num1) * Number(num2);
+            let res = document.getElementById("resultado");
+            res.textContent = multiplicacion_numero;
+        }
+
+        function division(){
+            let num1 = document.getElementById("numero1").value;
+            let num2 = document.getElementById("numero2").value;
+            let division_numero = Number(num1) / Number(num2);
+            let res = document.getElementById("resultado");
+            res.textContent = division_numero;
+        }
+    </script>
+    <style>
+        body {
+            background-color: #d6a4d1;
+            display: flex;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            padding-top: 18px;
+        }
+        h1 {
+            color: black;
+            font-family: helvetica;
+        }
+        input {
+            color: rgb(3, 17, 12);
+            background-color: bisque;
+            font-family: helvetica;
+            width: 200px;
+            height: 100px;
+        }
+        button {
+            color: rgb(231, 141, 111);
+            background-color: bisque;
+            margin-bottom: 20px;
+            
+        }
+    </style>
+</body>
